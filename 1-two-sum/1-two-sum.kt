@@ -3,7 +3,7 @@ class Solution {
         
         var list = mutableListOf<Pair<Int, Int>>()
         nums.forEachIndexed { idx, item -> list.add(Pair(item, idx)) }
-        list.sortWith(compareBy<Pair<Int,Int>> { it.first })
+        list.sortBy { it.first }
 
         var left = 0
         var right = nums.size - 1
